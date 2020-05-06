@@ -47,14 +47,13 @@ prepare () {
 }
 
 install () {
-  println "Installing ..."
-  git clone --depth 1 https://gitlab.com/yusdacra/kide "$KAK_CONF_DIR" || fail "couldn't clone kide"
+  println "Cloning kide..."
+  git clone --depth 1 https://gitlab.com/yusdacra/kide.git "$KAK_CONF_DIR" || fail "couldn't clone kide"
 
-  println "Installing plug.kak..."
-  git clone --depth 1 https://gitlab.com/andreyorst/plug.kak "$KAK_CONF_DIR/plug.kak" || fail "couldn't clone plug.kak"
+  println "Cloning plug.kak..."
+  git clone --depth 1 https://gitlab.com/andreyorst/plug.kak.git "$KAK_CONF_DIR/plug.kak" || fail "couldn't clone plug.kak"
   mkdir "$KAK_CONF_DIR/plugins"
 
-  println "Initial setup"
   println "Installing default plugins..."
   kak -ui dummy -e install-once
 }
