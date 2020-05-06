@@ -47,8 +47,8 @@ prepare () {
 }
 
 install () {
-  println "Cloning kide..."
-  git clone --depth 1 https://gitlab.com/yusdacra/kide.git "$KAK_CONF_DIR" || fail "couldn't clone kide"
+  println "Cloning kIDE..."
+  git clone --depth 1 https://gitlab.com/yusdacra/kide.git "$KAK_CONF_DIR" || fail "couldn't clone kIDE"
 
   println "Cloning plug.kak..."
   git clone --depth 1 https://gitlab.com/andreyorst/plug.kak.git "$KAK_CONF_DIR/plug.kak" || fail "couldn't clone plug.kak"
@@ -60,8 +60,8 @@ install () {
 
 println "Checking dependencies..."
 check_deps
-println "Preparing to install kide..."
+println "Preparing to install kIDE..."
 prepare
-println "Installing kide..."
+println "Installing kIDE..."
 install
 println "Installation complete! Happy coding!"

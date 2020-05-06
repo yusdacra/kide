@@ -1,14 +1,3 @@
-def ide %{
-    rename-client main
-    set global jumpclient main
-
-    new rename-client tools
-    set global toolsclient tools
-
-    new rename-client docs
-    set global docsclient docs
-} -docstring 'Creates an IDE-like environment.'
-
 def write-all-kill %{
     write-all
     kill
