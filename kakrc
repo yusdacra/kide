@@ -1,4 +1,4 @@
-# Load "system" settings
+source "%val{config}/plugin/plug.kak/rc/plug.kak"
 source "%val{config}/commands.kak"
 source "%val{config}/aliases.kak"
 source "%val{config}/mappings.kak"

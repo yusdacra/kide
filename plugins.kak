@@ -1,4 +1,3 @@
-source "%val{config}/plugin/plug.kak/rc/plug.kak"
 plug 'andreyorst/plug.kak' noload config %{
     set-option global plug_install_dir "%val{config}/plugin"
     set-option global plug_always_ensure true
@@ -87,6 +86,4 @@ plug 'lePerdu/kakboard' config %{
 ###################################################################################
 plug 'ul/kak-lsp' do %{
     cargo install --locked --force --path .
-} config %{
-    eval %sh{kak-lsp --kakoune -s $kak_session}
 }
