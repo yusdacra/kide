@@ -43,8 +43,7 @@ plug 'andreyorst/fzf.kak' defer 'fzf' %{
 } config %{
     map global user f ': fzf-mode<ret>' -docstring 'Enables fzf mode.'
 }
-
-
+###################################################################################
 plug 'alexherbo2/prelude.kak'
 plug 'alexherbo2/connect.kak'
 plug 'alexherbo2/auto-pairs.kak'
@@ -54,8 +53,7 @@ plug 'alexherbo2/move-line.kak' config %{
     map global insert <c-a-down> '<a-;>: move-line-below<ret>'
     map global insert <c-a-up>   '<a-;>: move-line-above<ret>'
 }
-
-
+###################################################################################
 plug 'occivink/kakoune-phantom-selection' config %{
     # overrides "select to" mapping
     map global normal f       ': phantom-selection-add-selection<ret>'
@@ -82,12 +80,11 @@ plug 'occivink/kakoune-gdb' config %{
         unmap global normal <F5>    ': gdb-continue<ret>'
     }
 }
-
-
+###################################################################################
 plug 'lePerdu/kakboard' config %{
     hook global WinCreate .* kakboard-enable
 }
-
+###################################################################################
 plug 'ul/kak-lsp' do %{
     cargo install --locked --force --path .
 } config %{

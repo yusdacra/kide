@@ -3,4 +3,4 @@ colorscheme tomorrow-night
 # Enable relative line numbering
 hook global WinCreate ^[^*]+$ %{ add-highlighter window/ number-lines -relative }
 # Change status line text
-set-option global modelinefmt '|{{mode_info}}|{magenta}%val{client}{default}|{yellow}%val{session}{default}|{green}%val{bufname}{default}|{{context_info}}|{cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+set-option global modelinefmt '{{mode_info}} in {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
