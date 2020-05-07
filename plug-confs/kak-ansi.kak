@@ -1,1 +1,0 @@
-plug 'eraserhd/kak-ansi'

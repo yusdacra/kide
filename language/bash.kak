@@ -6,7 +6,7 @@
 # After you source this configuration, run `plug-install` to ensure the plugins are installed.
 
 # Enables linting for shell scripts
-source "%val{config}/plug-confs/kakoune-shellcheck.kak"
+plug 'Screwtapello/kakoune-shellcheck' domain 'gitlab.com'
 
 hook global WinSetOption filetype=sh %{
     enable-lsp

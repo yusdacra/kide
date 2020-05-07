@@ -1,1 +1,0 @@
-plug 'Screwtapello/kakoune-shellcheck'

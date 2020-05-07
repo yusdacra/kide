@@ -1,23 +1,6 @@
 # If you don't like a mapping, unmap like this:
 # `unmap global <mode> <mapped-keys>`
 
-# Paste from system clipboard
-map global normal <c-v> ': cb-paste-before<ret>'
-map global normal <c-y> ': cb-paste-after<ret>'
-map global insert <c-v> '<esc>: cb-paste-before<ret>i'
-map global insert <c-y> '<esc>: cb-paste-after<ret>i'
-
-# Copy / cut with Ctrl
-map global normal <c-c> ': cb-copy<ret>'
-map global normal <c-x> ': cb-copy<ret>'
-map global insert <c-c> '<esc>: cb-copy<ret>i'
-map global insert <c-x> '<esc>: cb-copy<ret>i'
-
-# Indent the current selection with <tab>
-map global insert <tab> '<a-;><gt>'
-# De-indent the current selection with <s-tab>
-map global insert <s-tab> '<a-;><lt>'
-
 # Move with Ctrl
 map global normal <c-left>  'b'
 map global normal <c-right> 'w'
@@ -72,3 +55,4 @@ hook global InsertCompletionHide .* %{
     unmap window insert <s-tab>  '<c-p>'
     unmap window insert <esc>    '<c-o>'
 }
+
