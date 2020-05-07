@@ -9,7 +9,7 @@ def update-kide %{
         >&2 printf "%s\n" "$1"
         exit 1
     }
-    git -C "%val{config}" pull || fail "Update failed, could not update kIDE."
+    git -C "$HOME/.config/kak" pull || fail "Update failed, could not update kIDE."
     kak -ui dummy -e update-kide-internal || fail "Update failed, could not update plugins."
     printf "Update complete."
     read -n 1'
