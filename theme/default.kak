@@ -1,4 +1,4 @@
-colorscheme tomorrow-night
+colorscheme selenized-black
 
 # Enable relative line numbering
 hook global WinCreate ^[^*]+$ %{ add-highlighter window/ number-lines -relative }
