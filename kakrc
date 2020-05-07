@@ -4,7 +4,7 @@ source "%val{config}/aliases.kak"
 source "%val{config}/mappings.kak"
 source "%val{config}/plugins.kak"
 source "%val{config}/options.kak"
-source "%val{config}/themes/default.kak"
+source "%val{config}/theme/default.kak"
 
 # Try loading "user" settings
 try %{ source "%val{config}/user/kakrc" }
