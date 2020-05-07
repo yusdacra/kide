@@ -9,7 +9,7 @@
 plug 'Screwtapello/kakoune-shellcheck' domain 'gitlab.com'
 
 hook global WinSetOption filetype=sh %{
-    enable-lsp
+    configure-lsp
     
     def execute-script %{
         connect-terminal sh -c "bash %val{buffile}; read -n 1"

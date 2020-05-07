@@ -14,7 +14,7 @@ Language configuration files has requirements listed on top of the file.
 - `git`
 - `cargo`
 - `gdb`, `socat`, `perl`
-- `ctags`
+- `ctags`, `readtags`
 - Clipboard support:
     - Wayland: `wl-clipboard`
     - X11: `xsel` or `xclip`
@@ -27,5 +27,5 @@ Run `curl -L "http://nazr.in/1dTE" | sh`.
 
 ## Configuration
 Create and edit the file `~/.config/kak/user/kakrc`.
-- add `source "%val{config}/language/<language-name>"` to enable a language
-- add `source "%val{config}/theme/<theme-name>"` to enable a theme
+- add `source "%val{config}/language/name"` to enable a language
+- add `set-option global kide_theme name` to enable a theme

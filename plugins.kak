@@ -1,10 +1,8 @@
 source "%val{config}/plugin/plug.kak/rc/plug.kak"
 plug 'andreyorst/plug.kak' noload config %{
-    set-option global plug_install_dir %val{config}/plugin
+    set-option global plug_install_dir "%val{config}/plugin"
     set-option global plug_always_ensure true
 }
-
-plug 'andreyorst/powerline.kak' config powerline-start
 
 plug 'andreyorst/kaktree' config %{
     hook global WinSetOption filetype=kaktree %{

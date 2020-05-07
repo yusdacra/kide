@@ -25,7 +25,7 @@ fail () {
 }
 
 check_deps () {
-    dependencies=( "git" "kak" "fzf" "cargo" "bat" "rg" "ctags" "gdb" "socat" "perl" )
+    dependencies=( "git" "kak" "fzf" "cargo" "bat" "rg" "ctags" "readtags" "gdb" "socat" "perl" )
     cb_deps_x11=( "xsel" "xclip" )
     cb_deps_wayland=( "wl-copy" "wl-paste" )
     cb_deps_mac=( "pbcopy" "pbpaste" )

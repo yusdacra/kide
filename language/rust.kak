@@ -4,7 +4,7 @@
 # - rustfmt
 
 hook global WinSetOption filetype=rust %{
-    enable-lsp
+    configure-lsp
 
     set window formatcmd rustfmt
     set window makecmd cargo
