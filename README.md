@@ -1,13 +1,16 @@
-# kIDE (*k*akoune *I*ntegrated *D*evelopment *E*nvironment)
-`kIDE` is a collection of configurations and sensible defaults wrapped neatly to give the user the IDE feel.
+# kIDE (**k**akoune **I**ntegrated **D**evelopment **E**nvironment)
+`kIDE` is a (opinionated) `kakoune` configuration to give the user the IDE feel.
+WIP, although usable.
 
 ## Features
+Language configuration files has requirements listed on top of the file.
 - Supported languages:
     - Rust
+    - bash
 
 ## Requirements
-- `kak` stable version (duh)
-- `rg` (ripgrep)
+- `kakoune` built from master branch (not everything might work with stable)
+- `ripgrep`
 - `bat`
 - `cargo`
 - `git`
@@ -17,7 +20,9 @@
 Currently, only Linux distributions using Xorg are supported.
 
 ## Installation
-Run `curl "https://gitlab.com/yusdacra/kide/-/raw/master/install.sh?inline=false" > ~/install-kide.sh && bash ~/install-kide.sh`.
+Run `curl -L "http://nazr.in/1dTE" > ~/install-kide && sh ~/install-kide`.
+
+([nazr.in](http://nazr.in) is a cute little URL shortener.)
 
 ## Configuration
 Create and edit the file `~/.config/kak/user/kakrc`.

@@ -55,7 +55,7 @@ install () {
   mkdir "$KAK_CONF_DIR/plugins"
 
   println "Installing default plugins..."
-  kak -ui dummy -e install-once
+  kak -ui dummy -e update-kide-internal
 }
 
 println "Checking dependencies..."

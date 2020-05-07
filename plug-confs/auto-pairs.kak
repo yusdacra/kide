@@ -1,1 +1,1 @@
-plug "alexherbo2/auto-pairs.kak"
+plug 'alexherbo2/auto-pairs.kak'
