@@ -6,7 +6,7 @@ WIP, although usable.
 Language configuration files has requirements listed on top of the file.
 - Supported languages:
     - Rust
-    - bash
+    - shell (bash LSP support)
 
 ## Requirements
 - `kakoune` built from master branch (not everything might work with stable)
@@ -21,12 +21,11 @@ Language configuration files has requirements listed on top of the file.
     - Mac: `pbcopy` and `pbpaste`
 
 ## Installation
-Run `git clone --depth=1 --recursive https://gitlab.com/yusdacra/kide.git ~/.config/kak && kak -ui dummy -e setup-kide`.
+Run `git clone --depth=1 --recursive https://gitlab.com/yusdacra/kide.git ~/.config/kak`.
 
 ## Configuration
 Create and edit the file `~/.config/kak/user/kakrc`.
-- add `source "%val{config}/language/name"` to enable a language
-- add `set-option global kide_theme name` to enable a theme
+- add `kide-enable-theme name` to enable a theme
 - refer to a plugin's repository for more configuration (every configuration should apply)
 - you can add plugins here (refer to plug.kak)
 

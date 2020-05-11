@@ -30,3 +30,7 @@ def configure-lsp %{
     lsp-enable-window
     map global user l ':eum lsp<ret>' -docstring 'Enables LSP mode.'
 } -hidden
+
+def kide-enable-theme %{
+    source "%val{config}/theme/%arg{1}.kak"
+} -params 1 -docstring "Enables a theme."
