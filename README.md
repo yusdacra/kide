@@ -29,3 +29,5 @@ Create and edit the file `~/.config/kak/user/kakrc`.
 - add `set-option global kide_theme name` to enable a theme
 - refer to a plugin's repository for more configuration (every configuration should apply)
 - you can add plugins here (refer to plug.kak)
+
+You can create `.kakrc.local` in a folder for project / folder specific settings. Same rules as `user/kakrc` apply.
