@@ -21,6 +21,11 @@ def update-kide-internal %{
     quit!
 } -hidden
 
+def setup-kide %{
+    update-kide-internal
+    quit!
+} -hidden
+
 def configure-lsp %{
     lsp-enable-window
     map global user l ':eum lsp<ret>' -docstring 'Enables LSP mode.'
