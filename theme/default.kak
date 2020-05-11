@@ -1,4 +1,4 @@
-colorscheme selenized-black
+source "%val{config}/color/selenized-black.kak"
 
 # Enable relative line numbering
 hook global WinCreate ^[^*]+$ %{ add-highlighter window/ number-lines -relative }
