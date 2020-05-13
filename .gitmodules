@@ -1,3 +1,4 @@
 [submodule "plugin/plug.kak"]
 	path = plugin/plug.kak
 	url = https://gitlab.com/andreyorst/plug.kak.git
+	shallow = true
