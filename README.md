@@ -6,18 +6,19 @@ WIP, although usable.
 Language configuration files has requirements listed on top of the file.
 - Supported languages:
     - Rust
-    - shell (bash LSP support)
+    - shell (with bash LSP support)
 
 ## Requirements
 - `kakoune` built from master branch (not everything might work with stable)
 - `fzf`, `ripgrep`, `bat`
 - `git`
 - `cargo`
-- `gdb` or one of the alternatives, `socat`, `perl`
-- `universal-ctags`
+- `gdb`, `socat`, `perl` (for gdb inside kakoune)
+- `universal-ctags` (for ctags inside kakoune)
 - Clipboard support:
-    - Wayland: `wl-clipboard`
-    - X11: `xsel` or `xclip`
+    - Linux:
+        - Wayland: `wl-clipboard`
+        - X11: `xsel` or `xclip`
     - Mac: `pbcopy` and `pbpaste`
 
 ## Installation
@@ -29,4 +30,4 @@ Create and edit the file `~/.config/kak/user/kakrc`.
 - refer to a plugin's repository for more configuration (every configuration should apply)
 - you can add plugins here (refer to plug.kak)
 
-You can create `.kakrc.local` in a folder for project / folder specific settings. Same rules as `user/kakrc` apply.
+You can create `.kakrc.local` in a folder for project / folder specific configuration.
