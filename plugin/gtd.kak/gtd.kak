@@ -1,11 +1,5 @@
 declare-option bool gtd
 
-define-command gtd %(set-option buffer gtd yes) -docstring 'Enables GTD for current buffer.'
-
-hook global BufCreate '.*.gtd' %{
-    set-option buffer gtd yes
-}
-
 hook global WinSetOption gtd=true %{
     require-module gtd
     evaluate-commands set-option window static_words %opt{gtd_keywords}

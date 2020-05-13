@@ -4,9 +4,8 @@ source "%val{config}/aliases.kak"
 source "%val{config}/mappings.kak"
 source "%val{config}/options.kak"
 source "%val{config}/plugins.kak"
-source-folder "plugin"
-source-folder "language"
-kide-enable-theme "default"
+source-folder 'language'
+kide-enable-theme 'default'
 
 # Try loading "user" settings
 try %{ source "%val{config}/user/kakrc" }

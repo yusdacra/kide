@@ -87,3 +87,9 @@ plug 'lePerdu/kakboard' config %{
 plug 'ul/kak-lsp' do %{
     cargo install --locked --force --path .
 }
+###################################################################################
+plug 'gtd.kak' load-path "%opt{plug_install_dir}/gtd.kak" config %{
+    hook global BufCreate '.*.gtd' %{
+            set-option buffer gtd yes
+    }
+}

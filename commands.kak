@@ -46,17 +46,13 @@ def write-all-kill %{
 Writes all changed buffers associated to a file, kills all clients and the server.'
 
 def update-kide %{
-    connect-terminal sh -c \
-    'fail () {
-        >&2 printf "%s\n" "$1"
-        exit 1
-    }
-    git -C "$HOME/.config/kak" pull || fail "Update failed, could not update kIDE."
-    kak -ui dummy -e update-kide-internal || fail "Update failed, could not update plugins."
-    printf "Update complete."
-    read -n 1'
+    connect-terminal sh -c "
+    git -C '%val{config}' pull || exit 1 && echo 'Update failed, could not update kIDE.'
+    kak -c '%val{session}' -e update-kide-internal
+    echo 'Update complete. Please restart kakoune.'
+    read -n 1"
 } -docstring 'update-kide:
-Updates kIDE and all the plugins.'
+Updates kIDE.'
 
 def kide-enable-theme %{
     source "%val{config}/theme/%arg{1}.kak"
@@ -64,14 +60,8 @@ def kide-enable-theme %{
 Enables a theme.'
 
 def update-kide-internal %{
-    plug-install
     plug-update
-    quit!
-} -hidden
-
-def setup-kide %{
-    update-kide-internal
-    quit!
+    echo 'Please exit once all plugins are updated.'
 } -hidden
 
 def configure-lsp %{
