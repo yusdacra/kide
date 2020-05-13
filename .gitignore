@@ -1,3 +1,4 @@
 user/
 plugin/*
 !plugin/plug.kak
+!plugin/gtd.kak
