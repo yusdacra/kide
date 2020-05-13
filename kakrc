@@ -4,13 +4,9 @@ source "%val{config}/aliases.kak"
 source "%val{config}/mappings.kak"
 source "%val{config}/options.kak"
 source "%val{config}/plugins.kak"
-evaluate-commands %sh{
-    for f in $kak_config/language/*; do
-        echo "source $f"
-    done
-}
+source-folder "plugin"
+source-folder "language"
 kide-enable-theme "default"
-
 
 # Try loading "user" settings
 try %{ source "%val{config}/user/kakrc" }
