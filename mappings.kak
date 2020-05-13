@@ -25,9 +25,9 @@ map global insert <c-s-down>  '<a-;><s-j><a-;><a-x>'
 map global normal <c-f> '/'
 map global insert <c-f> '<a-;>/'
 
-# <c-s-f> - Select
-map global normal <c-s-f> 's'
-map global insert <c-s-f> '<a-;>s'
+# <c-a-f> - Select
+map global normal <c-a-f> 's'
+map global insert <c-a-f> '<a-;>s'
 
 # <c-s> - Write buffer to file
 map global normal <c-s> ': w<ret>'
@@ -37,6 +37,10 @@ map global insert <c-s> '<a-;>: w<ret>'
 map global normal <c-w> ': db<ret>'
 map global insert <c-w> '<a-;>: db<ret>'
 
+# <c-q> - Close kakoune
+map global normal <c-q> ': q<ret>'
+map global insert <c-q> '<a-;>: q<ret>'
+
 # <c-p> - Open prompt
 map global normal <c-p> ':'
 map global insert <c-p> '<a-;>:'
@@ -44,15 +48,15 @@ map global insert <c-p> '<a-;>:'
 # <#> Comments lines
 map global normal '#' ': comment-line<ret>'
 
-# <tab>/<s-tab> for completion selection
+# <tab>/<s-tab> for completion selection, <c-x> for cancelling
 hook global InsertCompletionShow .* %{
-    map window insert <tab>    '<c-n>'
-    map window insert <s-tab>  '<c-p>'
-    map window insert <esc>    '<c-o>'
+    map window insert <tab>     '<c-n>'
+    map window insert <s-tab>   '<c-p>'
+    map window insert <c-x>     '<c-o>'
 }
 hook global InsertCompletionHide .* %{
-    unmap window insert <tab>    '<c-n>'
-    unmap window insert <s-tab>  '<c-p>'
-    unmap window insert <esc>    '<c-o>'
+    unmap window insert <tab>     '<c-n>'
+    unmap window insert <s-tab>   '<c-p>'
+    unmap window insert <c-x>     '<c-o>'
 }
 
