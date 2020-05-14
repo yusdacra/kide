@@ -1,31 +1,43 @@
 def ide-mode %{
-    rename-client main
-    set global jumpclient main
-
     evaluate-commands %sh{
         if [ -n "$TMUX" ]; then
             tmux split-window -v kak -c ${kak_session} -e 'rename-client tools
             set global toolsclient tools'
-            tmux split-window -h -b kak -c ${kak_session} -e 'rename-client docs
-            set global docsclient docs'
             echo 'nop'
         else
             echo '
                 new rename-client tools
                 set global toolsclient tools
+            '
+        fi
+    }
 
+    rename-client main
+    set global jumpclient main
+
+    kaktree--display
+
+    try %(focus %opt(jumpclient))
+} -docstring 'ide-mode:
+Opens tool and file browser clients.'
+
+def docs-client %{
+    evaluate-commands %sh{
+        if [ -n "$TMUX" ]; then
+            tmux split-window -h -b kak -c ${kak_session} -e 'rename-client docs
+            set global docsclient docs'
+            echo 'nop'
+        else
+            echo '
                 new rename-client docs
                 set global docsclient docs
             '
         fi
     }
 
-    # Using hidden functions, probably not a good idea
-    kaktree--display
-
     try %(focus %opt(jumpclient))
-} -docstring 'ide-mode:
-Opens documentation, tool and file browser clients.'
+} -docstring 'docs-client:
+Opens a documentation client.'
 
 def editor-mode %{
     rename-client main

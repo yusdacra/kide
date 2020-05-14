@@ -24,7 +24,6 @@ plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
         remove-highlighter buffer/wrap
         remove-highlighter buffer/show-whitespaces
     }
-    hook global WinSetOption filetype=(c|cpp|rust) tagbar-enable
 }
 
 plug 'andreyorst/smarttab.kak' defer 'smarttab' %{

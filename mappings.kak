@@ -1,6 +1,10 @@
 # If you don't like a mapping, unmap like this:
 # `unmap global <mode> <mapped-keys>`
 
+# Editor / ide mode
+map global user i ': ide-mode<ret>' -docstring 'Enables IDE mode.'
+map global user e ': editor-mode<ret>' -docstring 'Enables editor mode.'
+
 # Move with Ctrl
 map global normal <c-left>  'b'
 map global normal <c-right> 'w'

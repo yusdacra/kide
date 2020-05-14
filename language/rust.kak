@@ -25,26 +25,29 @@ hook global WinSetOption filetype=rust %{
         hook -once -always window WinSetOption filetype=.* %{
             remove-hooks window semantic-tokens
         }
+
         def -params 1.. cargo %{
             connect-terminal "cargo %arg{@}; read -n 1"
         } \
-        -docstring "cargo [<arguments>]: 'cargo' wrapper"
+        -docstring "cargo [<arguments>]: 'cargo' wrapper
+        Arguments are forwarded to cargo."
 
         def -params 1.. rustup %{
             connect-terminal "rustup %arg{@}; read -n 1"
         } \
-        -docstring "rustup [<arguments>]: 'rustup' wrapper"
+        -docstring "rustup [<arguments>]: 'rustup' wrapper
+        Arguments are forwarded to rustup."
 
         def -params 1.. cargo-bg %{
             nop %sh{ cargo %arg{@} }
         } \
         -docstring "cargo-bg [<arguments>]: 'cargo' wrapper.
-        Runs in background."
+        Runs in background. Arguments are forwarded to cargo."
 
         def -params 1.. rustup-bg %{
             nop %sh{ rustup %arg{@} }
         } \
         -docstring "rustup [<arguments>]: 'rustup' wrapper.
-        Runs in background."
+        Runs in background. Arguments are forwarded to rustup."
     }
 }
