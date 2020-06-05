@@ -22,7 +22,7 @@ provide-module gtd %{
         execute-keys -draft '<a-x>s%arg{1}<ret>c%arg{2}<esc>'
     } -hidden -params 1..2
     
-    declare-option -hidden str-list gtd_keywords 'To do' 'Done'
+    declare-option -hidden str-list gtd_keywords 'To do' 'Done' 'Recurring' 'Idea'
 
     add-highlighter shared/gtd regions
     add-highlighter shared/gtd/code default-region group
