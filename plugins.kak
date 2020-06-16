@@ -29,7 +29,7 @@ plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
 plug 'andreyorst/smarttab.kak' defer 'smarttab' %{
     set-option global softtabstop 4
 } config %{
-    hook global WinSetOption filetype=(rust|markdown|kak|lisp|scheme|sh|perl) expandtab
+    hook global WinSetOption filetype=(rust|markdown|kak|lisp|scheme|sh|perl|haskell) expandtab
     hook global WinSetOption filetype=(makefile|gas) noexpandtab
     hook global WinSetOption filetype=(c|cpp) smarttab
 }
