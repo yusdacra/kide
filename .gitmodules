@@ -2,3 +2,42 @@
 	path = plugin/plug.kak
 	url = https://gitlab.com/andreyorst/plug.kak.git
 	shallow = true
+[submodule "plugin/kaktree"]
+	path = plugin/kaktree
+	url = https://github.com/andreyorst/kaktree
+[submodule "plugin/tagbar.kak"]
+	path = plugin/tagbar.kak
+	url = https://github.com/andreyorst/tagbar.kak
+[submodule "plugin/smarttab.kak"]
+	path = plugin/smarttab.kak
+	url = https://github.com/andreyorst/smarttab.kak
+[submodule "plugin/fzf.kak"]
+	path = plugin/fzf.kak
+	url = https://github.com/andreyorst/fzf.kak
+[submodule "plugin/prelude.kak"]
+	path = plugin/prelude.kak
+	url = https://github.com/alexherbo2/prelude.kak
+[submodule "plugin/connect.kak"]
+	path = plugin/connect.kak
+	url = https://github.com/alexherbo2/connect.kak
+[submodule "plugin/auto-pairs.kak"]
+	path = plugin/auto-pairs.kak
+	url = https://github.com/alexherbo2/auto-pairs.kak
+[submodule "plugin/move-line.kak"]
+	path = plugin/move-line.kak
+	url = https://github.com/alexherbo2/move-line.kak
+[submodule "plugin/kakoune-phantom-selection"]
+	path = plugin/kakoune-phantom-selection
+	url = https://github.com/occivink/kakoune-phantom-selection
+[submodule "plugin/kakoune-gdb"]
+	path = plugin/kakoune-gdb
+	url = https://github.com/occivink/kakoune-gdb
+[submodule "plugin/kakboard"]
+	path = plugin/kakboard
+	url = https://github.com/lePerdu/kakboard
+[submodule "plugin/kak-lsp"]
+	path = plugin/kak-lsp
+	url = https://github.com/ul/kak-lsp
+[submodule "plugin/kakoune-shellcheck"]
+	path = plugin/kakoune-shellcheck
+	url = https://gitlab.com/Screwtapello/kakoune-shellcheck
