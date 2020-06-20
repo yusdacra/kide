@@ -7,6 +7,7 @@ Language configuration files has requirements listed on top of the file.
 - Supported languages:
     - Rust
     - shell (with bash LSP support)
+    - Nix
 
 ## Requirements
 - `kakoune` built from master branch (not everything might work with stable)
