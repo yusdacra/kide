@@ -26,8 +26,8 @@ plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
     }
 }
 
-plug 'andreyorst/smarttab.kak' defer 'smarttab'  config %{
-    hook global WinSetOption filetype=(rust|markdown|kak|lisp|scheme|sh|perl|haskell|nix) expandtab
+plug 'andreyorst/smarttab.kak' config %{
+    hook global WinSetOption filetype=(rust|markdown|kak|lisp|scheme|sh|perl|haskell|nix|yaml) expandtab
     hook global WinSetOption filetype=(makefile|gas|gdscript) noexpandtab
     hook global WinSetOption filetype=(c|cpp) smarttab
 }
