@@ -12,9 +12,6 @@ def ide-mode %{
         fi
     }
 
-    rename-client main
-    set global jumpclient main
-
     kaktree--display
 
     try %(focus %opt(jumpclient))
@@ -40,9 +37,6 @@ def docs-client %{
 Opens a documentation client.'
 
 def editor-mode %{
-    rename-client main
-    set global jumpclient main
-
     try %(evaluate-commands -client %opt(toolsclient) quit!)
     try %(evaluate-commands -client %opt(docsclient) quit!)
     try %(evaluate-commands -client %opt(kaktreeclient) quit!)

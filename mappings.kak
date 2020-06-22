@@ -45,22 +45,25 @@ map global insert <c-w> '<a-;>: db<ret>'
 map global normal <c-q> ': q<ret>'
 map global insert <c-q> '<a-;>: q<ret>'
 
-# <c-p> - Open prompt
-map global normal <c-p> ':'
-map global insert <c-p> '<a-;>:'
+# <c-s-p> - Open prompt
+map global normal <c-s-p> ':'
+map global insert <c-s-p> '<a-;>:'
 
 # <#> Comments lines
 map global normal '#' ': comment-line<ret>'
 
-# <tab>/<s-tab> for completion selection, <c-x> for cancelling
+# <up>/<down> for completion selection, <tab> for confirming, <c-x> for cancelling
 hook global InsertCompletionShow .* %{
-    map window insert <tab>     '<c-n>'
-    map window insert <s-tab>   '<c-p>'
-    map window insert <c-x>     '<c-o>'
+    map window insert <tab>  '<enter>'
+    map window insert <esc>  '<c-o>'
+    map window insert <up>   '<c-p>'
+    map window insert <down> '<c-n>'
 }
+
 hook global InsertCompletionHide .* %{
-    unmap window insert <tab>     '<c-n>'
-    unmap window insert <s-tab>   '<c-p>'
-    unmap window insert <c-x>     '<c-o>'
+    unmap window insert <tab>  '<enter>'
+    unmap window insert <esc>  '<c-o>'
+    unmap window insert <up>   '<c-p>'
+    unmap window insert <down> '<c-n>'
 }
 
