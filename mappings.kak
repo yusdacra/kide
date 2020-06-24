@@ -54,14 +54,14 @@ map global normal '#' ': comment-line<ret>'
 
 # <up>/<down> for completion selection, <tab> for confirming, <c-x> for cancelling
 hook global InsertCompletionShow .* %{
-    map window insert <tab>  '<enter>'
+    map window insert <tab>  '<ret>'
     map window insert <esc>  '<c-o>'
     map window insert <up>   '<c-p>'
     map window insert <down> '<c-n>'
 }
 
 hook global InsertCompletionHide .* %{
-    unmap window insert <tab>  '<enter>'
+    unmap window insert <tab>  '<ret>'
     unmap window insert <esc>  '<c-o>'
     unmap window insert <up>   '<c-p>'
     unmap window insert <down> '<c-n>'
