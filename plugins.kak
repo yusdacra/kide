@@ -28,7 +28,7 @@ plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
 
 plug 'andreyorst/smarttab.kak' config %{
     hook global WinSetOption filetype=(rust|markdown|kak|lisp|scheme|sh|perl|haskell|nix|yaml) expandtab
-    hook global WinSetOption filetype=(makefile|gas|gdscript) noexpandtab
+    hook global WinSetOption filetype=(makefile|gas|gd) noexpandtab
     hook global WinSetOption filetype=(c|cpp) smarttab
 }
 
@@ -85,8 +85,10 @@ plug 'ul/kak-lsp' do %{
     cargo install --locked --force --path .
 }
 ###################################################################################
+plug 'Skytrias/gdscript-kak'
+###################################################################################
 plug 'gtd.kak' load-path "%opt{plug_install_dir}/gtd.kak" config %{
     hook global BufCreate '.*.gtd' %{
-            set-option buffer gtd yes
+        set-option buffer gtd yes
     }
 }

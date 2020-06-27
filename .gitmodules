@@ -41,3 +41,6 @@
 [submodule "plugin/kakoune-shellcheck"]
 	path = plugin/kakoune-shellcheck
 	url = https://gitlab.com/Screwtapello/kakoune-shellcheck
+[submodule "plugin/gdscript-kak"]
+	path = plugin/gdscript-kak
+	url = https://github.com/Skytrias/gdscript-kak.git
