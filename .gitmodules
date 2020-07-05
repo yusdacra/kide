@@ -17,9 +17,6 @@
 [submodule "plugin/prelude.kak"]
 	path = plugin/prelude.kak
 	url = https://github.com/alexherbo2/prelude.kak
-[submodule "plugin/connect.kak"]
-	path = plugin/connect.kak
-	url = https://github.com/alexherbo2/connect.kak
 [submodule "plugin/auto-pairs.kak"]
 	path = plugin/auto-pairs.kak
 	url = https://github.com/alexherbo2/auto-pairs.kak

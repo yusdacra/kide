@@ -41,7 +41,6 @@ plug 'andreyorst/fzf.kak' defer 'fzf' %{
 }
 ###################################################################################
 plug 'alexherbo2/prelude.kak'
-plug 'alexherbo2/connect.kak'
 plug 'alexherbo2/auto-pairs.kak'
 plug 'alexherbo2/move-line.kak' config %{
     map global normal <c-a-down> ': move-line-below<ret>'
