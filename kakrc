@@ -6,8 +6,10 @@ source "%val{config}/aliases.kak"
 source "%val{config}/mappings.kak"
 source-folder 'language'
 kide-enable-theme 'default'
+rename-client main
+set global jumpclient main
 
-# Try loading "user" settings
+# Try sourcing "user" kakrc
 try %{ source "%val{config}/user/kakrc" }
-# Source a local project kak config if it exists
+# Try sourcing local (in working directory) kakrc
 try %{ source .kakrc.local }

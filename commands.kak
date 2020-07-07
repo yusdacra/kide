@@ -1,4 +1,6 @@
 def ide-mode %{
+    kaktree-disable
+    
     evaluate-commands %sh{
         if [ -n "$TMUX" ]; then
             tmux split-window -v kak -c ${kak_session} -e 'rename-client tools
@@ -12,9 +14,16 @@ def ide-mode %{
         fi
     }
 
+    rename-client main
+    set global jumpclient main
+
+    kaktree-enable
     kaktree--display
 
-    try %(focus %opt(jumpclient))
+    unmap global user s
+    map global user s ': editor-mode<ret>' -docstring 'Switch to editor mode.'
+
+    focus %opt(jumpclient)
 } -docstring 'ide-mode:
 Opens tool and file browser clients.'
 
@@ -32,14 +41,17 @@ def docs-client %{
         fi
     }
 
-    try %(focus %opt(jumpclient))
+    focus %opt(jumpclient)
 } -docstring 'docs-client:
 Opens a documentation client.'
 
 def editor-mode %{
-    try %(evaluate-commands -client %opt(toolsclient) quit!)
-    try %(evaluate-commands -client %opt(docsclient) quit!)
-    try %(evaluate-commands -client %opt(kaktreeclient) quit!)
+    try %(eval -client %opt(toolsclient) quit!)
+    try %(eval -client %opt(docsclient) quit!)
+    try %(eval -client %opt(kaktreeclient) quit!)
+
+    unmap global user s
+    map global user s ': ide-mode<ret>' -docstring 'Switch to IDE mode.'
 
     focus %opt(jumpclient)
 } -docstring 'editor-mode:
