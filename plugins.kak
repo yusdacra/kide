@@ -9,6 +9,13 @@ plug 'andreyorst/kaktree' config %{
         remove-highlighter buffer/matching
         remove-highlighter buffer/wrap
         remove-highlighter buffer/show-whitespaces
+
+        set-option buffer modelinefmt ''
+        
+        map global user k ': focus %opt(kaktreeclient)' -docstring 'Focus the file manager window.'
+        hook -once -always global WinClose filetype=kaktree %{
+            unmap global user k
+        }
     }
     hook global WinCreate .* kaktree-enable
 }
@@ -23,6 +30,13 @@ plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
         remove-highlighter buffer/matching
         remove-highlighter buffer/wrap
         remove-highlighter buffer/show-whitespaces
+
+        set-option buffer modelinefmt ''
+        
+        map global user t ': focus %opt(tagbarclient)' -docstring 'Focus the tag bar window.'
+        hook -once -always global WinClose filetype=tagbar %{
+            unmap global user t
+        }
     }
 }
 

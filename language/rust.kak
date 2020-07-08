@@ -9,6 +9,7 @@ hook global WinSetOption filetype=rust %{
     set window formatcmd rustfmt
     set window makecmd cargo
 
+    # We use `try` in these two because the user might not have `rust-analyzer` (please use it, it's better)
     try %{
         # Enable inlay hints
         hook window -group rust-inlay-hints BufReload .* rust-analyzer-inlay-hints
@@ -17,7 +18,9 @@ hook global WinSetOption filetype=rust %{
         hook -once -always window WinSetOption filetype=.* %{
             remove-hooks window rust-inlay-hints
         }
+    }
 
+    try %{
         # Enable semantic highlighting
         hook window -group semantic-tokens BufReload .* lsp-semantic-tokens
         hook window -group semantic-tokens NormalIdle .* lsp-semantic-tokens
@@ -26,4 +29,8 @@ hook global WinSetOption filetype=rust %{
             remove-hooks window semantic-tokens
         }
     }
+
+    # Add highlighting for Cargo utility when using `make` command
+    add-highlighter shared/make/ regex "^(error)|(warning)" 1:red+b 2:yellow+b
+    add-highlighter shared/make/ regex "^ *Updating|Vendoring|Compiling|Checking|Finished|Running " 0:green+b
 }

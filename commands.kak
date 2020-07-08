@@ -1,10 +1,12 @@
 def ide-mode %{
     kaktree-disable
+    try %(tagbar-disable)
     
     evaluate-commands %sh{
         if [ -n "$TMUX" ]; then
             tmux split-window -v kak -c ${kak_session} -e 'rename-client tools
-            set global toolsclient tools'
+            set global toolsclient tools
+            buffer *debug*'
             echo 'nop'
         else
             echo '
@@ -17,6 +19,10 @@ def ide-mode %{
     rename-client main
     set global jumpclient main
 
+    tagbar-enable
+    focus %opt(tagbarclient)
+    focus %opt(jumpclient)
+    
     kaktree-enable
     kaktree--display
 
@@ -25,7 +31,7 @@ def ide-mode %{
 
     focus %opt(jumpclient)
 } -docstring 'ide-mode:
-Opens tool and file browser clients.'
+Opens tool, file browser and tagbar clients.'
 
 def docs-client %{
     evaluate-commands %sh{
@@ -48,14 +54,15 @@ Opens a documentation client.'
 def editor-mode %{
     try %(eval -client %opt(toolsclient) quit!)
     try %(eval -client %opt(docsclient) quit!)
-    try %(eval -client %opt(kaktreeclient) quit!)
+    try %(kaktree-disable)
+    try %(tagbar-disable)
 
     unmap global user s
     map global user s ': ide-mode<ret>' -docstring 'Switch to IDE mode.'
 
     focus %opt(jumpclient)
 } -docstring 'editor-mode:
-Closes documentation, tool, and file browser if they exist. This is the default mode of operation.'
+Closes documentation, tool, file browser and tag bar if they exist. This is the default mode of operation.'
 
 def write-all-kill %{
     write-all
