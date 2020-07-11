@@ -43,7 +43,7 @@ provide-module gtd %{
     add-highlighter shared/gtd/code/dates regex '^# \d{4}.\d{2}.\d{2} \w+$' 0:module
 
     define-command gtd-jump-today %{
-        set-register / "^# %sh(date '+%F' | sed -e 's/-/./g') \w+$"
+        set-register / "^# %sh(date '+%Y.%m.%d') \w+$"
         execute-keys '<space>n'
     }
 
