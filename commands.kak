@@ -3,7 +3,7 @@ def ide-mode %{
     
     evaluate-commands %sh{
         if [ -n "$TMUX" ]; then
-            tmux split-window -v kak -c ${kak_session} -e 'rename-client tools
+            tmux split-window -l 20% -v kak -c ${kak_session} -e 'rename-client tools
             set global toolsclient tools
             buffer *debug*'
             echo 'nop'
@@ -33,7 +33,7 @@ Opens tool, file browser and tagbar clients.'
 def docs-client %{
     evaluate-commands %sh{
         if [ -n "$TMUX" ]; then
-            tmux split-window -h -b kak -c ${kak_session} -e 'rename-client docs
+            tmux split-window -l 20% -h -b kak -c ${kak_session} -e 'rename-client docs
             set global docsclient docs'
             echo 'nop'
         else
