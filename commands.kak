@@ -1,6 +1,5 @@
 def ide-mode %{
     kaktree-disable
-    try %(tagbar-disable)
     
     evaluate-commands %sh{
         if [ -n "$TMUX" ]; then
@@ -20,14 +19,13 @@ def ide-mode %{
     set global jumpclient main
 
     tagbar-enable
-    focus %opt(jumpclient)
-    
     kaktree-enable
     kaktree--display
 
     unmap global user s
     map global user s ': editor-mode<ret>' -docstring 'Switch to editor mode.'
 
+    focus kaktreeclient
     focus %opt(jumpclient)
 } -docstring 'ide-mode:
 Opens tool, file browser and tagbar clients.'
