@@ -20,7 +20,6 @@ def ide-mode %{
     set global jumpclient main
 
     tagbar-enable
-    focus %opt(tagbarclient)
     focus %opt(jumpclient)
     
     kaktree-enable

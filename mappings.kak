@@ -64,3 +64,4 @@ hook global InsertCompletionHide .* %{
 }
 
 map global user s ': ide-mode<ret>' -docstring 'Switch to IDE mode.'
+map global user m ': focus %opt(jumpclient)<ret>' -docstring 'Focus the main window.'
