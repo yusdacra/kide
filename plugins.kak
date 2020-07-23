@@ -12,7 +12,7 @@ plug 'andreyorst/kaktree' config %{
 
         set-option buffer modelinefmt ''
         
-        map global user k ': focus %opt(kaktreeclient)' -docstring 'Focus the file manager window.'
+        map global user k ': focus %opt(kaktreeclient)<ret>' -docstring 'Focus the file manager window.'
         hook -once -always global WinClose filetype=kaktree %{
             unmap global user k
         }
@@ -33,7 +33,7 @@ plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
 
         set-option buffer modelinefmt ''
         
-        map global user t ': focus %opt(tagbarclient)' -docstring 'Focus the tag bar window.'
+        map global user t ': focus %opt(tagbarclient)<ret>' -docstring 'Focus the tag bar window.'
         hook -once -always global WinClose filetype=tagbar %{
             unmap global user t
         }
