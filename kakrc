@@ -6,8 +6,10 @@ source "%val{config}/aliases.kak"
 source "%val{config}/mappings.kak"
 source-folder 'language'
 kide-enable-theme 'default'
-rename-client main
-set global jumpclient main
+hook -once -always global ClientCreate .* %{
+    rename-client main
+    set-option global jumpclient main
+}
 
 # Try sourcing "user" kakrc
 try %{ source "%val{config}/user/kakrc" }
