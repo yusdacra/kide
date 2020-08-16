@@ -1,4 +1,4 @@
-plug 'andreyorst/plug.kak' noload config %{
+plug 'robertmeta/plug.kak' noload config %{
     set-option global plug_install_dir "%val{config}/plugin"
     set-option global plug_always_ensure true
 }
