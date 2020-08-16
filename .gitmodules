@@ -1,6 +1,6 @@
 [submodule "plugin/plug.kak"]
 	path = plugin/plug.kak
-	url = https://gitlab.com/andreyorst/plug.kak.git
+	url = https://github.com/robertmeta/plug.kak
 	shallow = true
 [submodule "plugin/kaktree"]
 	path = plugin/kaktree
