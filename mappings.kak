@@ -48,19 +48,17 @@ map global insert <c-s-p> '<a-;>:'
 # <#> Comments lines
 map global normal '#' ': comment-line<ret>'
 
-# <up>/<down> for completion selection, <tab> for confirming, <c-x> for cancelling
+# <up>/<down> for completion selection, <tab> for confirming, <ret> for cancelling
 hook global InsertCompletionShow .* %{
-    map window insert <tab>  '<ret>'
-    map window insert <esc>  '<c-o>'
-    map window insert <up>   '<c-p>'
-    map window insert <down> '<c-n>'
+    map window insert <ret>   '<c-o>'
+    map window insert <s-tab> '<c-p>'
+    map window insert <tab>   '<c-n>'
 }
 
 hook global InsertCompletionHide .* %{
-    unmap window insert <tab>  '<ret>'
-    unmap window insert <esc>  '<c-o>'
-    unmap window insert <up>   '<c-p>'
-    unmap window insert <down> '<c-n>'
+    unmap window insert <ret>   '<c-o>'
+    unmap window insert <s-tab> '<c-p>'
+    unmap window insert <tab>   '<c-n>'
 }
 
 map global user s ': ide-mode<ret>' -docstring 'Switch to IDE mode.'
