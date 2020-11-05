@@ -44,7 +44,6 @@ def ide-mode %{
     rename-client main
     set global jumpclient main
 
-    tagbar-enable
     kaktree-enable
     kaktree--display
 
@@ -60,7 +59,6 @@ def editor-mode %{
     try %(eval -client %opt(toolsclient) quit!)
     try %(eval -client %opt(docsclient) quit!)
     try %(kaktree-disable)
-    try %(tagbar-disable)
 
     unmap global user s
     map global user s ': ide-mode<ret>' -docstring 'Switch to IDE mode.'

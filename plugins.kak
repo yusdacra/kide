@@ -20,26 +20,6 @@ plug 'andreyorst/kaktree' config %{
     hook global WinCreate .* kaktree-enable
 }
 
-plug 'andreyorst/tagbar.kak' defer 'tagbar' %{
-    set-option global tagbar_sort false
-    set-option global tagbar_size 40
-    set-option global tagbar_display_anon false
-} config %{
-    hook global WinSetOption filetype=tagbar %{
-        remove-highlighter buffer/numbers
-        remove-highlighter buffer/matching
-        remove-highlighter buffer/wrap
-        remove-highlighter buffer/show-whitespaces
-
-        set-option buffer modelinefmt ''
-        
-        map global user t ': focus %opt(tagbarclient)<ret>' -docstring 'Focus the tag bar window.'
-        hook -once -always global WinClose filetype=tagbar %{
-            unmap global user t
-        }
-    }
-}
-
 plug 'andreyorst/smarttab.kak' config %{
     hook global WinSetOption filetype=(rust|markdown|kak|lisp|scheme|sh|perl|haskell|nix|yaml) expandtab
     hook global WinSetOption filetype=(makefile|gas|gd) noexpandtab

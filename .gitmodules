@@ -6,10 +6,6 @@
 	path = plugin/kaktree
 	url = https://github.com/andreyorst/kaktree
 	shallow = true
-[submodule "plugin/tagbar.kak"]
-	path = plugin/tagbar.kak
-	url = https://github.com/andreyorst/tagbar.kak
-	shallow = true
 [submodule "plugin/smarttab.kak"]
 	path = plugin/smarttab.kak
 	url = https://github.com/andreyorst/smarttab.kak
