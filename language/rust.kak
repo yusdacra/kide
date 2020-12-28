@@ -31,8 +31,8 @@ hook global WinSetOption filetype=rust %{
     }
 
     lsp-inlay-diagnostics-enable global
-    set-option global lsp_server_configuration rust-analyzer.cargo.loadOutDirsFromCheck=true
-    set-option global lsp_server_configuration rust-analyzer.procMacro.enable=true
+    set-option global lsp_server_configuration rust-analyzer.cargo.loadOutDirsFromCheck="on"
+    set-option global lsp_server_configuration rust-analyzer.procMacro.enable="on"
 
     # Add highlighting for Cargo utility when using `make` command
     add-highlighter shared/make/ regex "^(error)|(warning)" 1:red+b 2:yellow+b
